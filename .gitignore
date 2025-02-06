@@ -1,0 +1,20 @@
+# adding virtual environment folder to prevent it 
+virt/
+
+# bytecode files
+
+__pycache__/
+*.pyc
+*.pyo
+
+# django-specific files to be kept private
+
+*.log
+db.sqlite3
+media/
+
+# vs codee 
+.vscode/
+
+# Environment variables
+.env
