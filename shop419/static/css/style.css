@@ -4,11 +4,13 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: lightblue;
+
+
     body{
+        background: lightblue;
         header {
           height: 50px;
+          margin-bottom: 100px;
           nav {
               height: 100%;
               div,container-fluid {
@@ -17,5 +19,18 @@ body {
               }
           }
         }  
+        main {
+            h1 {
+            /* background-color: aqua; */
+            margin-top: 50px;
+            text-align: center;
+            }
+            div.video-box {
+                display: flex;
+                justify-content: center;
+                height: 400px;
+            }
+            
+        }
       }
-}
+
