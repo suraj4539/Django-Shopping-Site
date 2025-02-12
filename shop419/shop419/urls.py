@@ -17,7 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+#adding this line to support hosting of static files
+from django.conf.urls.static import static
+from django.conf import settings
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('mainapp.urls'))
+    path('', include('mainapp.urls')),
+    path('auth/', include('authentication.urls'))
+    path('auth/' include('django.contrib.auth.urls'))
 ]
+# the following line allows us to use the given media path during development
+if settings.DEBUG == True:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

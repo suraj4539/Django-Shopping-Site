@@ -17,3 +17,23 @@ def homeView(request):
     }
     template = loader.get_template('home.html')
     return HttpResponse(template.render(context, request))
+
+def aboutView(request):
+    context = {
+        'name' : "krishna",
+        'students' : [
+            "suraj",
+            "shivani",
+            "deepak"
+        ],
+
+    }
+    template = loader.get_template('about.html')
+    return HttpResponse(template.render(context, request))
+
+def contactView(request):
+    context = {
+        
+    }
+    template = loader.get_template('about.html')
+    return HttpResponse(template.render(context, request))
