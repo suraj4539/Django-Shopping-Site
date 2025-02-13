@@ -1,22 +1,23 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block title %}
-About 
+About
 {% endblock %}
 
 {% block content %}
-    <ul>
+
+     <ul>
         {% for student in students %}
             <li>{{student}}</li>
         {% endfor %}
-    </ul>
+     </ul>
 
-    <!-- Conditionals -->
+    <!-- conditional -->
      {% if slept %}
      I slept
      {% else %}
-     Did not sleep
+     Did not slept
      {% endif %}
-    
+     
 {% endblock %}

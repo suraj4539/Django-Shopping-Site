@@ -24,8 +24,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('mainapp.urls')),
-    path('auth/', include('authentication.urls'))
-    path('auth/' include('django.contrib.auth.urls'))
+    path('auth/', include('authentication.urls')),
+    path('auth/', include('django.contrib.auth.urls')),
 ]
 # the following line allows us to use the given media path during development
 if settings.DEBUG == True:
