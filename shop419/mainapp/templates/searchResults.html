@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
-{% load static %}
 
+{% block title %}
+search | {{query}}
+{% endblock %}
 
 {% block content %}
-<!-- This is for home page -->
+
+<h2>search result for {{query}}</h2>
+
         <div class="container">
-            {% for product in product_list %}
+            {% for product in items %}
             <div class="card">
                 <div class="card-img">
-                    <img src="{{product.pic}}" alt="">
+                    <img src="{{product.pic.url}}" alt="">
                 </div>
                 <div class="card-text">
                     <h3>
@@ -19,12 +23,10 @@
                     <p>
                         {{product.desc}}
                     </p>
-                    <a href="{% url 'add_to_cart' product.id %}">
-                        <button type="button">Add to cart</button>
-                    </a>
+                    <button>Add to cart</button>
                 </div>
             </div>
             {% endfor %}
         </div>
-<!-- home page code ends -->
+
  {% endblock %}
